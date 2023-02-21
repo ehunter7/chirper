@@ -14,6 +14,10 @@ class Chirp extends Model
         'message',
     ];
 
+    protected $dispatchEvents = [
+        'created' => ChirpCreated::class,
+    ];
+
     /**
      * Get the user that owns the Chirp
      *
